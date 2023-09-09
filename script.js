@@ -35,9 +35,12 @@ document.addEventListener('DOMContentLoaded', function () {
   
       const totalAmenitiesCost = (isAmenitiesACSelected ? amenitiesACCost : 0) +
         (isAmenitiesLockerSelected ? amenitiesLockerCost : 0);
-      const totalCost = totalRoomCost + totalAmenitiesCost;
+     
   
       const extraPersonsCost = numPersons > 2 ? (numPersons - 2) * extraPersonCost * numDays : 0;
+      
+
+      const totalCost = totalRoomCost + totalAmenitiesCost + extraPersonsCost;
       const balanceAmount = totalCost - advancePayment;
   
       balanceAmountInput.value = `${balanceAmount}/-`;
